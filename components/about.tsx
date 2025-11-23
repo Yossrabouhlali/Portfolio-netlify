@@ -42,7 +42,7 @@ export function About() {
                 <p className="text-sm text-muted-foreground">
                   Licence en technologie de l’informatique (2023 - présent)
                   <br />
-                  <span className="font-medium text-primary">ISETR Radés</span>
+                  <span className="font-medium text-primary">ISET Radés</span>
                 </p>
               </CardContent>
             </Card>

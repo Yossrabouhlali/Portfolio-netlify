@@ -1,8 +1,12 @@
 # Yossra Bouhlali - Portfolio Website 🎨✨
 
+<div align="center">
+  <img src="public/Yossra Portfolio and 3 more pages - Personal - Microsoft_ Edge 2025-11-23 19-18-06.gif" alt="Portfolio Demo" width="800">
+</div>
+
 Un portfolio moderne et élégant développé avec Next.js, TypeScript, et Tailwind CSS, mettant en valeur mes compétences en développement et mes projets en Systèmes Embarqués et Mobiles.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-BADGE-ID/deploy-status)](https://app.netlify.com/sites/yossra-portfolio/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/692331f0fa052d60971921c20/deploy-status)](https://app.netlify.com/sites/yossra-portfolio/deploys)
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
@@ -272,6 +276,63 @@ Assets statiques accessibles publiquement :
 
 ---
 
+## 📝 Scripts Disponibles
+
+```bash
+# Développement
+npm run dev          # Lance le serveur de développement (localhost:3000)
+npm run dev -- -p 3001   # Lance sur un port différent
+
+# Production
+npm run build        # Crée une version optimisée
+npm start            # Lance le serveur de production
+
+# Qualité du Code
+npm run lint         # Vérifie les erreurs ESLint
+npm run lint:fix     # Corrige automatiquement les erreurs
+```
+
+---
+
+## 🚀 Déploiement
+
+### Déploiement sur Netlify ⭐
+
+Le site est déjà déployé sur Netlify : **[https://yossra-portfolio.netlify.app](https://yossra-portfolio.netlify.app)**
+
+#### Redéployer après modifications :
+
+1. **Commit et push vos changements** :
+```bash
+git add .
+git commit -m "Description des changements"
+git push origin main
+```
+
+2. **Netlify redéploie automatiquement** votre site ! 🎉
+
+---
+
+## 📧 Contact
+
+Pour toute question, suggestion ou opportunité :
+
+### Yossra Bouhlali
+
+- 📧 **Email** : [yossrabouhlali@gmail.com](mailto:yossrabouhlali@gmail.com)
+
+- 💼 **LinkedIn** : [linkedin.com/in/yossra-bouhlali](https://linkedin.com/in/yossra-bouhlali)
+- 🐙 **GitHub** : [github.com/yossrabouhlali](https://github.com/yossrabouhlali)
+- 🌐 **Portfolio** : [yossra-portfolio.netlify.app](https://yossra-portfolio.netlify.app)
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence **MIT**.
+
+---
+
 <div align="center">
 
 ### Made with 💕 by Yossra Bouhlali
@@ -288,5 +349,7 @@ Assets statiques accessibles publiquement :
 **© 2025 Yossra Bouhlali. All rights reserved.**
 
 ⭐ **If you like this project, please give it a star!** ⭐
+
+<img src="public/Cat Girl GIF by Pluralsight.gif" alt="signature" width="300">
 
 </div>

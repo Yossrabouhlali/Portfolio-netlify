@@ -22,10 +22,10 @@ export function Contact() {
 
     try {
       await emailjs.sendForm(
-        'service_m0yii1k',
-        'template_2429fqr',
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         form,
-        'I_2oB9HrwTFG76q-X'
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
 
       toast({

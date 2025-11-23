@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -9,11 +9,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const { scrollY } = useScroll()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50)
   })
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const navLinks = [
     { name: "À propos", href: "#about" },
@@ -59,32 +64,34 @@ export function Nav() {
           </Button>
         </nav>
 
-        {/* Mobile Nav */}
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent>
-            <div className="flex flex-col gap-8 mt-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium transition-colors hover:text-primary"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                <a href={cvDownloadLink} target="_blank" rel="noreferrer">
-                  Télécharger CV
-                </a>
+        {/* Mobile Nav - Only render after mount to avoid hydration mismatch */}
+        {isMounted && (
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
               </Button>
-            </div>
-          </SheetContent>
-        </Sheet>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="flex flex-col gap-8 mt-8">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-lg font-medium transition-colors hover:text-primary"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+                <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                  <a href={cvDownloadLink} target="_blank" rel="noreferrer">
+                    Télécharger CV
+                  </a>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        )}
       </div>
     </motion.header>
   )
